@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rita Lee</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@300;400;600;700&display=swap');
+
+    :root {
+      --primary: #2B0A1D;      /* Roxo profundo */
+      --secondary: #6D214F;    /* Rosa escuro */
+      --accent: #FF4D6D;       /* Rosa vibrante */
+      --highlight: #FFD1DC;    /* Rosa claro */
+      --text: #F9F9F9;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--primary);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    .title-font {
+      font-family: 'Archivo Black', sans-serif;
+    }
+
+    .album-cover {
+      transition: transform 0.3s ease;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    }
+
+    .album-cover:hover {
+      transform: scale(1.05);
+    }
+
+    .nav-link {
+      position: relative;
+    }
+
+    .nav-link:after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -5px;
+      left: 0;
+      background-color: var(--accent);
+      transition: width 0.3s ease;
+    }
+
+    .nav-link:hover:after {
+      width: 100%;
+    }
+  </style>
+</head>
+<body class="min-h-screen">
+
+  <!-- Navigation -->
+  <nav class="bg-black bg-opacity-70 backdrop-blur-md fixed w-full z-50 border-b border-[var(--secondary)]">
+    <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+      <div class="flex items-center">
+        <img src="./images/logo-rita.png" alt="Logo Rita Lee" class="h-12 rounded-full">
+      </div>
+      <div class="hidden md:flex space-x-8">
+        <a href="#home" class="nav-link text-white hover:text-[var(--accent)]">Início</a>
+        <a href="#about" class="nav-link text-white hover:text-[var(--accent)]">Sobre</a>
+        <a href="#music" class="nav-link text-white hover:text-[var(--accent)]">Discografia</a>
+        <a href="#tour" class="nav-link text-white hover:text-[var(--accent)]">Shows</a>
+        <a href="#shop" class="nav-link text-white hover:text-[var(--accent)]">Loja</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="pt-32 pb-20 px-6 bg-gradient-to-b from-[var(--primary)] to-black">
+    <div class="container mx-auto flex flex-col md:flex-row items-center">
+      <div class="md:w-1/2 mb-10 md:mb-0">
+        <h1 class="title-font text-4xl md:text-6xl lg:text-7xl font-bold mb-4">
+          A RAINHA DO<br>ROCK BRASILEIRO
+        </h1>
+        <p class="text-lg md:text-xl mb-8 text-[var(--highlight)]">
+          O legado eterno de Rita Lee
+        </p>
+        <div class="flex space-x-4">
+          <button class="bg-[var(--accent)] hover:bg-[var(--highlight)] text-black font-bold py-3 px-6 rounded-full transition duration-300">
+            OUVIR AGORA
+          </button>
+          <button class="border-2 border-[var(--accent)] hover:bg-[var(--accent)] hover:text-black text-[var(--accent)] font-bold py-3 px-6 rounded-full transition duration-300">
+            VER CLIPE
+          </button>
+        </div>
+      </div>
+      <div class="md:w-1/2 flex justify-center">
+        <img src="./images/rita-capa.jpeg" alt="Rita Lee capa destaque" class="album-cover rounded-lg w-full max-w-md">
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20 px-6 bg-[var(--primary)]">
+    <div class="container mx-auto">
+      <h2 class="title-font text-3xl md:text-4xl font-bold mb-16 text-center">RITA LEE</h2>
+      <div class="flex flex-col md:flex-row items-center">
+        <div class="md:w-1/3 mb-10 md:mb-0 flex justify-center">
+          <img src="./images/rita-perfil.jpeg" alt="Retrato de Rita Lee" class="rounded-lg shadow-xl w-full max-w-sm">
+        </div>
+        <div class="md:w-2/3 md:pl-16">
+          <p class="text-lg mb-6">
+            Rita Lee Jones de Carvalho (1947–2023) foi cantora, compositora, multi-instrumentista e escritora brasileira.
+          </p>
+          <p class="text-lg mb-6">
+            Conhecida como a "Rainha do Rock Brasileiro", sua carreira passou pelos Mutantes, Tutti Frutti e parcerias históricas com Roberto de Carvalho.
+          </p>
+          <p class="text-lg mb-8">
+            Ícone da música, Rita misturou irreverência, poesia e ousadia em mais de 50 anos de trajetória.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <div class="bg-[var(--secondary)] bg-opacity-50 px-4 py-2 rounded-full">
+              <span class="font-bold text-[var(--accent)]">Gênero: </span>Rock, Pop, MPB
+            </div>
+            <div class="bg-[var(--secondary)] bg-opacity-50 px-4 py-2 rounded-full">
+              <span class="font-bold text-[var(--accent)]">Origem: </span>São Paulo, Brasil
+            </div>
+            <div class="bg-[var(--secondary)] bg-opacity-50 px-4 py-2 rounded-full">
+              <span class="font-bold text-[var(--accent)]">Ativa: </span>1966 – 2012
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Music Section -->
+  <section id="music" class="py-20 px-6 bg-gradient-to-b from-[var(--primary)] to-black">
+    <div class="container mx-auto">
+      <h2 class="title-font text-3xl md:text-4xl font-bold mb-16 text-center">DISCOGRAFIA</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        <!-- Album 1 -->
+        <div class="bg-[var(--secondary)] bg-opacity-20 rounded-lg overflow-hidden hover:scale-105 transition transform">
+          <img src="./images/fruto-proibido.jpeg" alt="Fruto Proibido" class="w-full">
+          <div class="p-6">
+            <h3 class="title-font text-xl font-bold mb-2">Fruto Proibido</h3>
+            <p class="text-sm text-[var(--highlight)] mb-4">1975 • 10 faixas</p>
+            <button class="bg-[var(--accent)] hover:bg-[var(--highlight)] text-black text-sm font-bold py-2 px-4 rounded-full w-full transition duration-300">
+              OUVIR ÁLBUM
+            </button>
+          </div>
+        </div>
+        
+        <!-- Album 2 -->
+        <div class="bg-[var(--secondary)] bg-opacity-20 rounded-lg overflow-hidden hover:scale-105 transition transform">
+          <img src="./images/saude.jpeg" alt="Saúde" class="w-full">
+          <div class="p-6">
+            <h3 class="title-font text-xl font-bold mb-2">Saúde</h3>
+            <p class="text-sm text-[var(--highlight)] mb-4">1981 • 9 faixas</p>
+            <button class="bg-[var(--accent)] hover:bg-[var(--highlight)] text-black text-sm font-bold py-2 px-4 rounded-full w-full transition duration-300">
+              OUVIR ÁLBUM
+            </button>
+          </div>
+        </div>
+        
+        <!-- Album 3 -->
+        <div class="bg-[var(--secondary)] bg-opacity-20 rounded-lg overflow-hidden hover:scale-105 transition transform">
+          <img src="./images/rita-e-roberto.jpeg" alt="Rita e Roberto" class="w-full">
+          <div class="p-6">
+            <h3 class="title-font text-xl font-bold mb-2">Rita & Roberto</h3>
+            <p class="text-sm text-[var(--highlight)] mb-4">1985 • 12 faixas</p>
+            <button class="bg-[var(--accent)] hover:bg-[var(--highlight)] text-black text-sm font-bold py-2 px-4 rounded-full w-full transition duration-300">
+              OUVIR ÁLBUM
+            </button>
+          </div>
+        </div>
+        
+        <!-- Album 4 -->
+        <div class="bg-[var(--secondary)] bg-opacity-20 rounded-lg overflow-hidden hover:scale-105 transition transform">
+          <img src="./images/3001.jpeg" alt="3001" class="w-full">
+          <div class="p-6">
+            <h3 class="title-font text-xl font-bold mb-2">3001</h3>
+            <p class="text-sm text-[var(--highlight)] mb-4">2000 • 14 faixas</p>
+            <button class="bg-[var(--accent)] hover:bg-[var(--highlight)] text-black text-sm font-bold py-2 px-4 rounded-full w-full transition duration-300">
+              OUVIR ÁLBUM
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
+<script src="./script.js"></script>
