@@ -1,0 +1,118 @@
+/* styles.css */
+
+/* Importando fontes */
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@300;400;600;700&display=swap');
+
+/* Paleta Rita Lee */
+:root {
+  --primary: #2B0A1D;      /* Roxo profundo */
+  --secondary: #6D214F;    /* Rosa escuro */
+  --accent: #FF4D6D;       /* Rosa vibrante */
+  --highlight: #FFD1DC;    /* Rosa claro */
+  --text: #F9F9F9;
+}
+
+/* Reset e fontes */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--primary);
+  color: var(--text);
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.title-font {
+  font-family: 'Archivo Black', sans-serif;
+}
+
+/* Navegação */
+nav {
+  transition: background-color 0.3s ease;
+}
+
+.nav-link {
+  position: relative;
+}
+
+.nav-link:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: var(--accent);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover:after {
+  width: 100%;
+}
+
+/* Capas de álbum */
+.album-cover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+.album-cover:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+}
+
+/* Botões */
+button {
+  transition: transform 0.15s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+/* Fade-in animado */
+.opacity-0 {
+  opacity: 0;
+}
+.opacity-100 {
+  opacity: 1;
+}
+.translate-y-6 {
+  transform: translateY(1.5rem);
+}
+.translate-y-0 {
+  transform: translateY(0);
+}
+.transition-all {
+  transition: all 0.7s ease;
+}
+
+/* Fundo psicodélico pulsante */
+.psicodelico {
+  background: radial-gradient(circle at center,
+    #FF4D6D 0%,
+    #6D214F 40%,
+    #2B0A1D 100%);
+  animation: pulseColors 10s infinite alternate;
+}
+
+@keyframes pulseColors {
+  0% {
+    background: radial-gradient(circle at center,
+      #FF4D6D,
+      #6D214F,
+      #2B0A1D);
+  }
+  50% {
+    background: radial-gradient(circle at center,
+      #FFD1DC,
+      #FF4D6D,
+      #6D214F);
+  }
+  100% {
+    background: radial-gradient(circle at center,
+      #6D214F,
+      #2B0A1D,
+      #FF4D6D);
+  }
+}
